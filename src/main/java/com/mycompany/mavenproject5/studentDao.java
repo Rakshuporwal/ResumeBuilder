@@ -14,7 +14,7 @@ public class studentDao {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish connection
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?autoReconnect=true&useSSL=false", "root", "root");
+            Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
 
             // Prepare SQL query
             String sql = "INSERT INTO students (id, name, age, education, skills, achievements) VALUES (?, ?, ?, ?, ?, ?)";
